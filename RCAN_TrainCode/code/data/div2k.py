@@ -23,7 +23,8 @@ class DIV2K(srdata.SRData):
         else:
             idx_begin = self.args.n_train
             idx_end = self.args.offset_val + self.args.n_val
-
+        print(self.args.n_train, self.args.offset_val)
+        print(idx_begin, idx_end)
         for i in range(idx_begin + 1, idx_end + 1):
             filename = '{:0>4}'.format(i)
             list_hr.append(os.path.join(self.dir_hr, filename + self.ext))
